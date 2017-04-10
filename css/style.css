@@ -59,10 +59,9 @@ body
   margin-left: 25px;
   margin-top: 81px;
   display: block;
-  background: #373B3E;
 }
 
-.song-cover
+.cover
 {
   width: 370px;
   margin-top: 80px;
@@ -70,7 +69,7 @@ body
   border-radius: 9px;
 }
 
-.player-body
+#player-body
 {
   position: relative;
   height: 200px;
@@ -80,7 +79,7 @@ body
   background: #3BC1E0;
 }
 
-.player-body img
+#player-body img
 {
   margin-top: -170px;
   filter: blur(21px);
@@ -93,7 +92,7 @@ body
   top: 0;
 }
 
-.album-title
+.title
 {
   display: block;
   font-size: 19px;
@@ -101,34 +100,53 @@ body
   color: #fffffb;
   padding: 30px 0 5px 0;
   text-transform: uppercase;
+
+  text-shadow: 
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000; 
 }
 
-.song-title
+.artist
 {
   display: block;
   font-size: 14px;
   color: #fffffb;
   padding: 15px 0 5px 0;
   text-transform: uppercase;
+
+  text-shadow: 
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000; 
 }
 
 .player-controls
 {
   display: block;
-  color: rgba(255,255,255,1);
   font-size: 31px;
   padding-top: 25px;
   padding-left: 35px;
 }
 
-.player-controls i
+.player-controls button
 {
+  color: rgba(255,255,255,1);
   margin-right: 35px;
+  background: none;
+  border: none;
+  text-shadow: 
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000; 
 }
 
-.player-controls i.active
+.player-controls button.active
 {
-  color: #FFF;
+  color: #E3E3E3;
 }
 
 .player-footer
@@ -137,36 +155,36 @@ body
   border-radius: 0 0 11px 11px;
 }
 
-.player-seekbar
+#progress
 {
   position: relative;
   height: 7px;
   background: #ffffff;
 }
 
-.player-seekbar:before
+#progress:before
 {
   position: absolute;
   content: '';
-  width: 90%;
+  width: 100%;
   display: inline-block;
   height: 3px;
   background: #3F6C76;
   margin-top: 2px;
 }
 
-.player-seekbar:after
+#progress:after
 {
   position: absolute;
   content: '';
-  width: 30%;
+  width: 0;
   display: inline-block;
   height: 3px;
   background: #3BC1E0;
   margin-top: 2px;
 }
 
-.player-knot
+#player-knot
 {
   position: absolute;
   display: block;
@@ -174,10 +192,10 @@ body
   height: 10px;
   z-index: 9999;
   border: 7px solid #1D79BD;
-  background: #ffffff;
+  background: #FFF;
   border-radius: 100%;
   margin-top: -8.5px;
-  margin-left: 30%;
+  margin-left: 0;
 }
 
 .song-controls
@@ -196,6 +214,12 @@ body
   text-align: center;
   font-size: 18px;
   color: #ffffff;
+
+  text-shadow: 
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000; 
 }
 
 .song-controls span .fa-play
@@ -204,4 +228,32 @@ body
   font-size: 27px;
   margin-top: 26px;
   margin-left: -11px;
+  background: none;
+  border: none;
+  color: #FFF;
+  text-shadow: 
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000; 
+}
+
+.song-controls span .fa-pause
+{
+  position: absolute;
+  font-size: 27px;
+  margin-top: 26px;
+  margin-left: -11px;
+  background: none;
+  border: none;
+  color: #FFF;
+  text-shadow: 
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000; 
+}
+
+#playlist{
+	list-style: none;
 }

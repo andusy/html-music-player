@@ -10,40 +10,49 @@
   <div class="container">
     <div class="player">
       <div class="player-head">
-        <img src="images/covers/cover.jpg" alt="cover" class="song-cover">
+        <img class="cover">
       </div>
-      <div class="player-body">
-        <img src="images/covers/cover.jpg" alt="cover" class="song-cover">
+      <div id="player-body">
+        <img class="cover">
         <div class="album-info">
-          <span class="album-title">
-            Album
+          <span class="title">
           </span>
-          <span class="song-title">
-            Song
+          <span class="artist">
           </span>
           <span class="player-controls">
-            <i class="fa fa-home active"></i>
-            <i class="fa fa-random active"></i>
-            <i class="fa fa-retweet active"></i>
-            <i class="fa fa-clock-o active"></i>
+            <button class="fa fa-step-backward" id = 'previous'></button>
+            <button class="fa fa-random" id = 'shuffle'></button>
+            <button class="fa fa-retweet" id = "repeat"></button>
+            <button class="fa fa-step-forward" id = 'forward'></button>
           </span>
         </div>
       </div>
       <div class="player-footer">
-        <div class="player-seekbar">
-          <span class="player-knot"></span>
+        <div id="progress">
+          <span id="player-knot"></span>
         </div>
         <div class="song-controls">
-          <span class="current-duration">
-            00:03
-          </span><span class="play">
-            <i class="fa fa-play active"></i>
-          </span><span class="total-duration">
-            04:03
+          <span id ="duration">
+          </span>
+          <span class = "play-pause-button">
+            <button id = "play" class="fa fa-play active"></button>
+            <button id = "pause" class="fa fa-pause active"></button>
+          </span>
+          <span id="total-duration">
           </span>
         </div>
       </div>
     </div>
+
+    <p>Current Playlist:</p>
+    <ul id = "playlist">
+    	<li song="The Library (Intro).mp3 " cover="Time_Travel.jpg" artist="BIGBANG">BAE BAE</li>
+  		<li song="The Time Goes On.mp3 " cover="Time_Travel.jpg" artist="BewhY (비와이)">The Time Goes On</li>
+  		<li song="So What.mp3 " cover="Time_Travel.jpg" artist="BewhY (비와이)">So What</li>
+  	</ul>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
   </div>
 </body>
 </html>
