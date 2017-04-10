@@ -1,6 +1,7 @@
 var audio;
 var repeat = false;
 var shuffle = false;
+var skip = 0;
 
 //Hide Pause Button
 $('#pause').hide();
@@ -98,9 +99,11 @@ $('#shuffle').click(function(){
 	if (shuffle){
 		shuffle = false;
 		$('#shuffle').css('color','#FFF');
+		skip = 0;
 	} else{
 		shuffle = true;
 		$('#shuffle').css('color','#E3E3E3');
+		skip = Math.random()*8;
 	}
 });
 
