@@ -11,7 +11,7 @@ initAudio($('#playlist li:first-child'));
 //Initializer Function
 function initAudio(element){
 	var song = element.attr('song');
-	var title = element.text();
+	var title = element.attr('song-name');
 	var cover = element.attr('cover');
 	var artist = element.attr('artist');
 
