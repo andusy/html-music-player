@@ -126,7 +126,7 @@ function showDuration(){
 		$('#progress:after').css('width',val+'%');
 		$('#player-knot').css('margin-left',val+'%');
 
-		if (val >= 95){
+		if (val >= 100){
 			nextSong();
 		}
 	});	
